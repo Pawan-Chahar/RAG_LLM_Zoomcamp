@@ -51,7 +51,7 @@ Video
 
 Running ElasticSearch:
 
-'''
+```
 docker run -it \
     --rm \
     --name elasticsearch \
@@ -61,11 +61,11 @@ docker run -it \
     -e "discovery.type=single-node" \
     -e "xpack.security.enabled=false" \
     docker.elastic.co/elasticsearch/elasticsearch:8.4.3
-'''
+```
 
 If the previous command doesn't work (i.e. you see "error pulling image configuration"), try to run ElasticSearch directly from Docker Hub:
 
-'''
+```
 docker run -it \
     --rm \
     --name elasticsearch \
@@ -74,10 +74,11 @@ docker run -it \
     -e "discovery.type=single-node" \
     -e "xpack.security.enabled=false" \
     elasticsearch:8.4.3
-    '''
+    
+```
 
 Index settings:
-'''
+```
 {
     "settings": {
         "number_of_shards": 1,
@@ -92,10 +93,10 @@ Index settings:
         }
     }
 }
-'''
+```
 
 Query:
-'''
+```
 {
     "size": 5,
     "query": {
@@ -115,7 +116,7 @@ Query:
         }
     }
 }
-'''
+```
 
 We use "type": "best_fields". You can read more about different types of multi_match search in elastic-search.md.
 
@@ -123,11 +124,12 @@ We use "type": "best_fields". You can read more about different types of multi_m
 
 More information here.
 
-Extra materials
-If you're curious to know how the code for parsing the FAQ works, check this video
-Open-Source LLMs (optional)
+
+
+## Open-Source LLMs (optional)
+
 It's also possible to run LLMs locally. For that, we can use Ollama. Check these videos from LLM Zoomcamp 2024 if you're interested in learning more about it:
 
-Ollama - Running LLMs on a CPU
-Ollama & Phi3 + Elastic in Docker-Compose
-UI for RAG
+* Ollama - Running LLMs on a CPU
+* Ollama & Phi3 + Elastic in Docker-Compose
+* UI for RAG

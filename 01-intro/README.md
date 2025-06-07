@@ -12,8 +12,9 @@
 Installing libraries
 Alternative: installing anaconda or miniconda
 
+```
 pip install tqdm notebook==7.1.2 openai elasticsearch==8.13.0 pandas scikit-learn ipywidgets
-
+```
 
 
 ## 1.3 Retrieval 

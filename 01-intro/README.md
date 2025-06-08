@@ -61,7 +61,8 @@ docker run -it \
     -p 9300:9300 \
     -e "discovery.type=single-node" \
     -e "xpack.security.enabled=false" \
-    docker.elastic.co/elasticsearch/elasticsearch:8.4.3
+    -e "ES_JAVA_OPTS=-Xms1g -Xmx1g" \
+    docker.elastic.co/elasticsearch/elasticsearch:8.15.1
 ```
 
 If the previous command doesn't work (i.e. you see "error pulling image configuration"), try to run ElasticSearch directly from Docker Hub:
